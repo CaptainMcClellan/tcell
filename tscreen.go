@@ -424,7 +424,7 @@ func (t *tScreen) ResetTitle() {
 		for _, s := range strings.Split(os.Getenv("SHELL"), "/") {
 			titlestring = "\033k" + s + "\033\\"
 		}
-			titlestring += "\033]2;" + os.Getenv("USER") + os.Getenv("USERNAME") + "@" + host + ": " + wd + "\007"
+			titlestring += "\033]2;" + os.Getenv("USER") + os.Getenv("USERNAME") + "@" + host + ": " + wd + "\007 \n"
 		t.TPuts(titlestring)
 	}
 }
